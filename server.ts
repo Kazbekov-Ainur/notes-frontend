@@ -11,6 +11,13 @@ export function app(): express.Express {
   const serverDistFolder = dirname(fileURLToPath(import.meta.url));
   const browserDistFolder = resolve(serverDistFolder, '../browser');
   const indexHtml = join(serverDistFolder, 'index.server.html');
+  const domino = require('domino');
+  const fs = require('fs');
+  const path = require('path');
+  const template = fs.readFileSync(path.join(__dirname, '.', 'dist', 'index.html')).toString();
+  const win = domino.createWindow(template);
+  global['window'] = win;
+  global['document'] = win.document;
 
   const commonEngine = new CommonEngine();
 
