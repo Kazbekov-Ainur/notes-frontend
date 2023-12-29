@@ -11,6 +11,7 @@ import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 import { NoteCardComponent } from './note-card/note-card.component';
 import { NoteDetailsComponent } from './pages/note-details/note-details.component';
 import { RemindersListComponent } from './pages/reminders-list/reminders-list.component';
+import { TagsListComponent } from './pages/tags-list/tags-list.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { RemindersListComponent } from './pages/reminders-list/reminders-list.co
     MainLayoutComponent,
     NoteCardComponent,
     NoteDetailsComponent,
-    RemindersListComponent
+    RemindersListComponent,
+    TagsListComponent
   ],
   imports: [
     BrowserModule,
